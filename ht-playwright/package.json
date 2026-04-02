@@ -1,0 +1,27 @@
+{
+  "name": "ht-playwright-e2e",
+  "version": "1.0.0",
+  "description": "End-to-end Playwright test suite for staging.hephzibahtech.in",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:mobile": "npx playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:tablet": "npx playwright test --project=tablet",
+    "test:headed": "npx playwright test --headed",
+    "test:load": "npx playwright test tests/e2e/01-page-load.spec.ts",
+    "test:navigation": "npx playwright test tests/e2e/02-navigation.spec.ts",
+    "test:rendering": "npx playwright test tests/e2e/03-page-rendering.spec.ts",
+    "test:form": "npx playwright test tests/e2e/04-contact-form.spec.ts",
+    "test:responsive": "npx playwright test tests/e2e/05-responsive.spec.ts",
+    "test:cross-browser": "npx playwright test tests/e2e/06-cross-browser.spec.ts",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.0.0"
+  }
+}
