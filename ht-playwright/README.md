@@ -196,11 +196,3 @@ jobs:
 
 ## Key Design Decisions
 
-| Decision | Reason |
-|---|---|
-| Page Object Model (POM) | Keeps tests clean; locator changes need only one-place fixes |
-| Label-based selectors | More resilient than CSS classes; survive Tailwind changes |
-| No `waitForTimeout` | Uses Playwright auto-wait and `expect()` locator waits instead |
-| Fixture file for all data | Test files contain zero hardcoded strings or URLs |
-| `only-on-failure` artefacts | Keeps disk usage low during normal runs |
-| Tolerant assertions on form | Form implementation may vary; tests check intent not implementation detail |
